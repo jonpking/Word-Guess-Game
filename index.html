@@ -8,7 +8,6 @@
   <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <script src="assets/javascript/game.js"></script>
 </head>
 
 <body>
@@ -17,13 +16,24 @@
         <h1>HANGMAN</h1>
     </div>
     <div class="card">
-        <h2 id="wins">Wins: </h2>
-        <h2 id="loses">Loses: </h2>
-        <h2 id="guessesLeft">Guesses Remaining: </h2>
-        <h2 id="lettersGuessed">Letters Guessed: </h2>
-        <h2 id="currentWord">Current Word: </h2>
+        <h2>Wins: 
+            <span id="wins"></span>
+        </h2>
+        <h2>Loses: 
+            <span id="loses"></span>
+        </h2>
+        <h2>Guesses Remaining: 
+            <span id="guessesRemaining"></span>
+        </h2>
+        <h2>Letters Guessed: 
+            <span id="lettersGuessed"></span>
+        </h2>
+        <h2>Current Word: 
+            <span id="currentWord"></span>
+        </h2>
     </div>
 
+    <script src="assets/javascript/game.js"></script>
 </body>
 
 </html>
