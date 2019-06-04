@@ -25,10 +25,12 @@ document.getElementById("guessesRemaining").innerHTML = guessesRemaining;
 document.getElementById("lettersGuessed").innerHTML = lettersGuessed;
 document.getElementById("currentWord").innerHTML = blanks;
 
-// registers key press and reduces number of guesses remaining, if out of guesses remaining it increases loses
+// registers key press and reduces number of guesses remaining, if out of guesses remaining it increases loses, 
+// adds letters to list of letters guessed
 
 document.addEventListener("keyup", function(event){
     lettersGuessed.push(event.key);
+    document.getElementById("lettersGuessed").innerHTML = lettersGuessed;
     guessesRemaining--;
     document.getElementById("guessesRemaining").innerHTML = guessesRemaining;
     if(guessesRemaining < 1){
@@ -47,6 +49,7 @@ document.addEventListener("keyup", function(event){
         };
     });
 
+// checks if entire word has been guessed, iterates wins if it has
 
 
     console.log("blanks", blanks);
