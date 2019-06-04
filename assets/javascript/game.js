@@ -15,9 +15,16 @@ console.log("Length and Split")
 console.log(selectedWordArray);
 console.log(blanks);
 
+document.getElementById("wins").innerHTML = wins;
+document.getElementById("loses").innerHTML = loses;
+document.getElementById("guessesRemaining").innerHTML = guessesRemaining;
+document.getElementById("lettersGuessed").innerHTML = lettersGuessed;
+document.getElementById("currentWord").innerHTML = blanks;
+
 document.addEventListener("keyup", function(event){
     lettersGuessed.push(event.key);
     guessesRemaining--;
+
     selectedWordArray.forEach(function(letter, index){
         console.log("key press", event.key);
         console.log("letter", letter);
@@ -31,8 +38,3 @@ document.addEventListener("keyup", function(event){
     console.log("lettersGuessed", lettersGuessed);
 });
 
-document.getElementById("wins").innerHTML = wins;
-document.getElementById("loses").innerHTML = loses;
-document.getElementById("guessesRemaining").innerHTML = guessesRemaining;
-document.getElementById("lettersGuessed").innerHTML = lettersGuessed;
-document.getElementById("currentWord").innerHTML = blanks;
