@@ -40,15 +40,18 @@ document.addEventListener("keyup", function (event) {
     if (blanks.toString() == selectedWordArray.toString()) {
         wins++;
         document.getElementById("wins").innerHTML = wins;
-        setTimeout(function () { alert("YOU WIN!") }, 1);
-        lettersGuessed = [];
-        document.getElementById("lettersGuessed").innerHTML = lettersGuessed;
-        guessesRemaining = 10;
-        document.getElementById("guessesRemaining").innerHTML = guessesRemaining;
-        selectedWord = words[Math.floor(Math.random() * words.length)];
-        selectedWordArray = selectedWord.split("");
-        blanks = selectedWordArray.slice(0).fill("_");
-        document.getElementById("currentWord").innerHTML = blanks.join(" ");
+        setTimeout(function () {
+             alert("YOU WIN!") 
+             lettersGuessed = [];
+             document.getElementById("lettersGuessed").innerHTML = lettersGuessed;
+             guessesRemaining = 10;
+             document.getElementById("guessesRemaining").innerHTML = guessesRemaining;
+             selectedWord = words[Math.floor(Math.random() * words.length)];
+             selectedWordArray = selectedWord.split("");
+             blanks = selectedWordArray.slice(0).fill("_");
+             document.getElementById("currentWord").innerHTML = blanks.join(" ");
+            }, 1);
+        
         return;
     }
     guessesRemaining--;
